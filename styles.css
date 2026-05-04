@@ -14,7 +14,7 @@ body {
 main {
   background-color: black;
   width: 30%;
-  height: 85vh;
+  height: auto;
   margin: 10vh auto;
   border-radius: 15px;
   /* padding: 2% auto; */
@@ -26,7 +26,7 @@ main {
   border: 1.5px solid yellow;
   background-color: azure;
   width: 90%;
-  height: 20%;
+  height: 20vh;
   margin: 5% auto;
 }
 
@@ -56,6 +56,7 @@ main {
   justify-content: space-between;
   width: 100%;
   height: auto;
+  margin-bottom: 3%;
 }
 
 /* BUTTONS IN ROWS OF THREES*/
@@ -99,14 +100,14 @@ main {
 @media screen and (max-width: 780px) {
   main {
     width: 40%;
-    height: 85vh;
+    /* height: 85vh; */
   }
 }
 
 @media screen and (max-width: 650px) {
   main {
     width: 40%;
-    height: 80vh;
+    /* height: 80vh; */
   }
 }
 
@@ -119,14 +120,14 @@ main {
 @media screen and (max-width: 515px) {
   main {
     width: 70%;
-    height: 85vh;
+    /* height: 85vh; */
   }
 }
 
 @media screen and (max-width: 400px) {
   main {
     width: 70%;
-    height: 80vh;
+    /* height: 80vh; */
   }
 }
 
@@ -134,7 +135,7 @@ main {
 @media screen and (max-width: 350px) {
   main {
     width: 70%;
-    height: 72vh;
+    /* height: 72vh; */
   }
 }
 
