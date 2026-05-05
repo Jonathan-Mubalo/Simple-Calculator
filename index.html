@@ -9,49 +9,38 @@
   </head>
   <body>
     <main class="calculator body">
-      <section class="input-field">input field</section>
+      <section class="input-field"><input id="display" type ="text" readonly ></section>
       <section class="numbers">
-        <button>9</button>
-        <button>8</button>
-        <button>7</button>
-        <button>+</button>
+        <button onclick="calculatorOperator('9')">9</button>
+        <button onclick="calculatorOperator('8')">8</button>
+        <button onclick="calculatorOperator('7')">7</button>
+        <button class="design1" onclick="calculatorOperator('+')">+</button>
       </section>
       <section class="numbers">
-        <button>5</button>
-        <button>4</button>
-        <button>3</button>
-        <button>-</button>
+        <button onclick="calculatorOperator('6')">6</button>
+        <button onclick="calculatorOperator('5')">5</button>
+        <button onclick="calculatorOperator('4')">4</button>
+        <button class="design1" onclick="calculatorOperator('-')">-</button>
       </section>
       <section class="numbers">
-        <button>2</button>
-        <button>1</button>
-        <button>0</button>
-        <button>∕</button>
+        <button onclick="calculatorOperator('3')">3</button>
+        <button onclick="calculatorOperator('2')">2</button>
+        <button onclick="calculatorOperator('1')">1</button>
+        <button class="design1" onclick="calculatorOperator('/')">∕</button>
       </section>
       <section class="numbers">
-        
-        <button class="equals">=</button>
-        <button>∗</button>
+         <button onclick="calculatorOperator('0')">0</button>
+        <button onclick="calculatorOperator('.')">.</button>
+         <button onclick="calculatorOperator('00')">00</button>
+        <button class="design1" onclick="calculatorOperator('*')">∗</button>
+      </section>
+       <section class="numbers">
+        <button class="equals design2" onclick="clearDisplay()">clr</button>
+         <button class="equals design2"  onclick="calculate()">=</button>
+
       </section>
 
-      <!-- <section id="buttons">
-        <section class="rows3">
-          <section class="numbers2">
-            <button>1</button>
-            <button>1</button>
-            <button>1</button>
-          </section>
-          <section class="numbers2">
-            <button>1</button>
-            <button>1</button>
-            <button>1</button>
-          </section>
-        </section>
-        <section class="numbers3">
-          <button>1</button>
-        </section>
-      </section> -->
-      <script src="calcuations.js"></script>
+      <script src="index.js"></script>
     </main>
   </body>
 </html>
