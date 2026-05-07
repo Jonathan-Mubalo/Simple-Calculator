@@ -4,10 +4,10 @@ function calculatorOperator(input){
     calculatorDisplay['value'] += input;
 }
 
-function clearDisplay(input){
+function clearDisplay(){
     calculatorDisplay.value = '';
 }
-
-function calculate(input){
+ 
+function calculate(){
     calculatorDisplay.value= eval(calculatorDisplay.value);
 }
