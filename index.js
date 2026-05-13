@@ -16,7 +16,11 @@ function clearDisplay() {
 
 function calculate() {
 
-   if (calculatorDisplay.value.includes("/") == true) {
+if(calculatorDisplay.value.includes('+-') || calculatorDisplay.value.includes('++') || calculatorDisplay.value.includes('+/') || calculatorDisplay.value.includes('+*') || calculatorDisplay.value.includes('--') || calculatorDisplay.value.includes('-+') || calculatorDisplay.value.includes('-/') || calculatorDisplay.value.includes('-*') || calculatorDisplay.value.includes('/-') || calculatorDisplay.value.includes('/+') || calculatorDisplay.value.includes('//') || calculatorDisplay.value.includes('/*') || calculatorDisplay.value.includes('*-') || calculatorDisplay.value.includes('*+') || calculatorDisplay.value.includes('*/') || calculatorDisplay.value.includes('**')){
+   return calculatorDisplay.value= `Syntax error`;
+}
+
+  else if (calculatorDisplay.value.includes("/") == true) {
       let divPos = calculatorDisplay.value.indexOf('/');
       firstPart = calculatorDisplay.value.slice(0, divPos);
       firstValue = parseFloat(firstPart);
