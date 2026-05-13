@@ -4,9 +4,9 @@ function calculatorOperator(input) {
    return calculatorDisplay['value'] += input;
 }
 
-function calculatorDelete(){
+function calculatorDelete() {
    let lastCharacterPos = calculatorDisplay.value.length;
-   let newValue = calculatorDisplay.value.slice(0,lastCharacterPos-1);
+   let newValue = calculatorDisplay.value.slice(0, lastCharacterPos - 1);
    return calculatorDisplay.value = newValue;
 }
 
@@ -15,28 +15,8 @@ function clearDisplay() {
 }
 
 function calculate() {
-   if (calculatorDisplay.value.includes("+") == true) {
-      let plusPos = calculatorDisplay.value.indexOf("+");
-      let firstPart = calculatorDisplay.value.slice(0, plusPos);
-      let firstValue = parseFloat(firstPart);
-      let secondPart = calculatorDisplay.value.slice(plusPos + 1);
-      let secondValue = parseFloat(secondPart);
-      let finalAnswer = firstValue + secondValue;
-      return calculatorDisplay.value = finalAnswer;
-   }
 
-   else if (calculatorDisplay.value.includes("-") == true) {
-      let subPos = calculatorDisplay.value.indexOf("-");
-      firstPart = calculatorDisplay.value.slice(0, subPos);
-      firstValue = parseFloat(firstPart);
-      secondPart = calculatorDisplay.value.slice(subPos + 1);
-      secondValue = parseFloat(secondPart);
-      finalAnswer = firstValue - secondValue;
-      return calculatorDisplay.value = finalAnswer;
-   }
-
-   
-   else if (calculatorDisplay.value.includes("/") == true) {
+   if (calculatorDisplay.value.includes("/") == true) {
       let divPos = calculatorDisplay.value.indexOf('/');
       firstPart = calculatorDisplay.value.slice(0, divPos);
       firstValue = parseFloat(firstPart);
@@ -54,6 +34,26 @@ function calculate() {
       secondPart = calculatorDisplay.value.slice(timesPos + 1);
       secondValue = parseFloat(secondPart);
       finalAnswer = firstValue * secondValue;
+      return calculatorDisplay.value = finalAnswer;
+   }
+
+   else if (calculatorDisplay.value.includes("+") == true) {
+      let plusPos = calculatorDisplay.value.indexOf("+");
+      let firstPart = calculatorDisplay.value.slice(0, plusPos);
+      let firstValue = parseFloat(firstPart);
+      let secondPart = calculatorDisplay.value.slice(plusPos + 1);
+      let secondValue = parseFloat(secondPart);
+      let finalAnswer = firstValue + secondValue;
+      return calculatorDisplay.value = finalAnswer;
+   }
+
+   else if (calculatorDisplay.value.includes("-") == true) {
+      let subPos = calculatorDisplay.value.indexOf("-");
+      firstPart = calculatorDisplay.value.slice(0, subPos);
+      firstValue = parseFloat(firstPart);
+      secondPart = calculatorDisplay.value.slice(subPos + 1);
+      secondValue = parseFloat(secondPart);
+      finalAnswer = firstValue - secondValue;
       return calculatorDisplay.value = finalAnswer;
    }
 
@@ -83,11 +83,11 @@ function calculate() {
 
    else {
       let powerPos = calculatorDisplay.value.indexOf("^");
-      firstPart = calculatorDisplay.value.slice(0,powerPos);
+      firstPart = calculatorDisplay.value.slice(0, powerPos);
       firstValue = parseFloat(firstPart);
-      secondPart = calculatorDisplay.value.slice(powerPos+1); 
+      secondPart = calculatorDisplay.value.slice(powerPos + 1);
       secondValue = parseFloat(secondPart);
-      finalAnswer = firstValue**secondValue;
+      finalAnswer = firstValue ** secondValue;
       return calculatorDisplay.value = finalAnswer;
    }
 
